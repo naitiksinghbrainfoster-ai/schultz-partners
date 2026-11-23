@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+::selection {
+  background: #c5a869;
+  color: #ffffff;
+}
+
+.slide-enter {
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #a88746 0%, #c5a869 50%, #8e6d2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-box-shadow {
+  box-shadow: 0 10px 30px -10px rgb(197 168 105 / 25%);
+}
+
+.glass-clean-white {
+  background: rgb(255 255 255 / 94%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.stat-card-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card-shimmer::after {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(197 168 105 / 12%),
+    transparent
+  );
+  content: "";
+  transform: skewX(-20deg);
+  transition: left 0.75s ease-in-out;
+}
+
+.stat-card-shimmer:hover::after {
+  left: 150%;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
