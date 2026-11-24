@@ -11,26 +11,14 @@ export default function PageInteractions({
     const root = document.getElementById("page-content");
     if (!root) return;
 
-    const menuButton = root.querySelector<HTMLButtonElement>("#mobileMenuBtn");
-    const menuIcon = root.querySelector<HTMLElement>("#menuIcon");
-    const mobileDrawer = root.querySelector<HTMLElement>("#mobileDrawer");
-    const contactForm = root.querySelector<HTMLFormElement>("form");
-
-    const toggleMobileMenu = () => {
-      if (!mobileDrawer || !menuIcon || !menuButton) return;
-      mobileDrawer.classList.toggle("hidden");
-      const isOpen = !mobileDrawer.classList.contains("hidden");
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuIcon.textContent = isOpen ? "close" : "menu";
-    };
-
-    menuButton?.addEventListener("click", toggleMobileMenu);
-    mobileDrawer
-      ?.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')
-      .forEach((link) => link.addEventListener("click", toggleMobileMenu));
+    const formsToPrevent = root.querySelectorAll<HTMLFormElement>(
+      "form:not([data-mailto-form])",
+    );
 
     const preventFormSubmit = (event: SubmitEvent) => event.preventDefault();
-    contactForm?.addEventListener("submit", preventFormSubmit);
+    formsToPrevent.forEach((form) =>
+      form.addEventListener("submit", preventFormSubmit),
+    );
 
     const revealTargets = root.querySelectorAll<HTMLElement>(
       ":scope > section:not(:first-of-type) > .max-w-7xl, :scope > footer > .max-w-7xl",
@@ -97,11 +85,9 @@ export default function PageInteractions({
     }
 
     return () => {
-      menuButton?.removeEventListener("click", toggleMobileMenu);
-      mobileDrawer
-        ?.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')
-        .forEach((link) => link.removeEventListener("click", toggleMobileMenu));
-      contactForm?.removeEventListener("submit", preventFormSubmit);
+      formsToPrevent.forEach((form) =>
+        form.removeEventListener("submit", preventFormSubmit),
+      );
       window.removeEventListener("scroll", scheduleReveal);
       window.removeEventListener("resize", scheduleReveal);
       counterObserver?.disconnect();

@@ -54,6 +54,16 @@ export default function BusinessConsultingSection() {
           </p>
         </div>
 
+        <div className="mb-8">
+          <a
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-navy transition-colors hover:text-brand-gold"
+            href="/unternehmensberatung"
+          >
+            <span>Mehr zur Unternehmensberatung</span>
+            <span aria-hidden="true" className="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           {practices.map((practice) => (
             <article

@@ -9,6 +9,7 @@ const recruitmentServices = [
     imageAlt: "Zwei Kollegen besprechen gemeinsam Unterlagen",
     requestLabel: "Personalberatung anfragen",
     moreLabel: "Mehr zur Personalberatung",
+    moreHref: "/personalberatung/hr-management",
   },
   {
     title: "Karriereberatung",
@@ -18,6 +19,7 @@ const recruitmentServices = [
     imageAlt: "Beratungsgespräch in einem modernen Büro",
     requestLabel: "Karriereberatung anfragen",
     moreLabel: "Mehr zur Karriereberatung",
+    moreHref: "/personalberatung/karriereberatung",
   },
   {
     title: "Headhunting",
@@ -27,13 +29,14 @@ const recruitmentServices = [
     imageAlt: "Führungskräfte im Gespräch am Konferenztisch",
     requestLabel: "Headhunting anfragen",
     moreLabel: "Mehr zum Headhunting",
+    moreHref: "/personalberatung#headhunting",
   },
 ];
 
 export default function RecruitmentSection() {
   return (
     <section
-      className="relative z-0 border-b border-brand-border bg-white pb-20 pt-28 sm:pb-28 sm:pt-36"
+      className="relative z-0 border-b border-brand-border bg-white pb-20 pt-20 sm:pb-28 sm:pt-24"
       id="personalberatung"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -106,7 +109,7 @@ export default function RecruitmentSection() {
                 <div className="space-y-2.5 pt-2">
                   <a
                     className="block w-full rounded-lg bg-brand-navy px-3 py-2.5 text-center text-[11px] font-bold uppercase tracking-wider text-white transition-colors hover:bg-brand-slate"
-                    href="#kontakt"
+                    href={service.moreHref}
                   >
                     {service.requestLabel}
                   </a>

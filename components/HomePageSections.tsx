@@ -3,6 +3,7 @@ import HeroSection from "./sections/HeroSection";
 import SharpestWorkSection from "./sections/SharpestWorkSection";
 import BusinessConsultingSection from "./sections/BusinessConsultingSection";
 import RecruitmentSection from "./sections/RecruitmentSection";
+import StatsSection from "./sections/StatsSection";
 import ReferencesSection from "./sections/ReferencesSection";
 import EditorialValuesSection from "./sections/EditorialValuesSection";
 import ContactSection from "./sections/ContactSection";
@@ -14,6 +15,7 @@ export default function HomePageSections() {
       <Header />
       <HeroSection />
       <RecruitmentSection />
+      <StatsSection />
       <BusinessConsultingSection />
       <SharpestWorkSection />
       <ReferencesSection />

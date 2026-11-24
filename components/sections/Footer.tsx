@@ -26,12 +26,12 @@ export default function Footer() {
               Dienstleistungen
             </h2>
             <ul className="space-y-2 text-xs text-slate-300 sm:text-[13px]">
-              <li><a className="transition-colors hover:text-white" href="#personalberatung">Personalberatung</a></li>
-              <li><a className="transition-colors hover:text-white" href="#personalberatung">Karriereberatung &amp; Coaching</a></li>
-              <li><a className="transition-colors hover:text-white" href="#personalberatung">Executive Headhunting</a></li>
-              <li><a className="transition-colors hover:text-white" href="#unternehmensberatung">Strategische Neuausrichtung</a></li>
-              <li><a className="transition-colors hover:text-white" href="#unternehmensberatung">Restrukturierung (IDW S6)</a></li>
-              <li><a className="transition-colors hover:text-white" href="#unternehmensberatung">Post Merger Integration (PMI)</a></li>
+              <li><a className="transition-colors hover:text-white" href="/personalberatung/hr-management">Personalberatung</a></li>
+              <li><a className="transition-colors hover:text-white" href="/personalberatung/karriereberatung">Karriereberatung &amp; Coaching</a></li>
+              <li><a className="transition-colors hover:text-white" href="/personalberatung#headhunting">Executive Headhunting</a></li>
+              <li><a className="transition-colors hover:text-white" href="/unternehmensberatung/strategieberatung-operative-umsetzung">Strategische Neuausrichtung</a></li>
+              <li><a className="transition-colors hover:text-white" href="/unternehmensberatung/restrukturierungsberatung/">Restrukturierung (IDW S6)</a></li>
+              <li><a className="transition-colors hover:text-white" href="/unternehmensberatung/post-merger-integration">Post Merger Integration (PMI)</a></li>
             </ul>
           </div>
 
@@ -76,7 +76,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p>© 2026 Schultz &amp; Partner Unternehmensberatung &amp; Personalberatung. Alle Rechte vorbehalten.</p>
-          <div className="flex items-center gap-5">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <a className="transition-colors hover:text-white" href="#">Impressum</a>
             <a className="transition-colors hover:text-white" href="#">Datenschutz</a>
             <a className="transition-colors hover:text-white" href="#">Compliance</a>

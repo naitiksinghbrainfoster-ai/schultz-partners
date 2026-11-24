@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-[540px] sm:min-h-[580px] pt-28 sm:pt-32 pb-10 sm:pb-14 flex flex-col justify-between bg-[#FAFAF8] overflow-visible">
+    <section className="relative w-full min-h-[540px] sm:min-h-[580px] pt-28 sm:pt-32 pb-10 sm:pb-14 flex flex-col justify-between bg-[#FAFAF8] overflow-hidden">
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video
           aria-hidden="true"
@@ -36,40 +36,6 @@ export default function HeroSection() {
             </a>
           </div>
           <div className="pt-1" />
-        </div>
-      </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[40%] z-30 w-full max-w-5xl px-4 sm:px-6">
-        <div className="bg-white rounded-2xl border border-brand-border/80 shadow-[0_15px_40px_-5px_rgba(10,25,47,0.12)] p-4 sm:py-6 sm:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-center">
-            <div className="stat-card-shimmer group flex flex-col items-center sm:items-start text-center sm:text-left px-2 py-1 rounded-xl transition-all duration-300 hover:bg-brand-offwhite/50 cursor-default">
-              <div className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-navy flex items-baseline tracking-tight leading-none">
-                <span className="counter-number" data-target={25}>25</span><span className="text-brand-gold font-serif">+</span>
-              </div>
-              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-brand-navy mt-1.5">JAHRE EXPERTISE</div>
-              <div className="text-[10px] sm:text-[11px] text-brand-muted truncate">Hanseatische Tradition</div>
-            </div>
-            <div className="stat-card-shimmer group flex flex-col items-center sm:items-start text-center sm:text-left px-2 py-1 rounded-xl transition-all duration-300 hover:bg-brand-offwhite/50 cursor-default border-t sm:border-t-0 sm:border-l border-brand-border/70 sm:pl-6">
-              <div className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-navy flex items-baseline tracking-tight leading-none">
-                <span className="counter-number" data-target={98}>98</span><span className="text-brand-gold font-serif">%</span>
-              </div>
-              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-brand-navy mt-1.5">BESETZUNGSQUOTE</div>
-              <div className="text-[10px] sm:text-[11px] text-brand-muted truncate">Vorstände &amp; C-Level</div>
-            </div>
-            <div className="stat-card-shimmer group flex flex-col items-center sm:items-start text-center sm:text-left px-2 py-1 rounded-xl transition-all duration-300 hover:bg-brand-offwhite/50 cursor-default border-t lg:border-t-0 lg:border-l border-brand-border/70 lg:pl-6">
-              <div className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-navy flex items-baseline tracking-tight leading-none">
-                <span className="counter-number" data-target={350}>350</span><span className="text-brand-gold font-serif">+</span>
-              </div>
-              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-brand-navy mt-1.5">MANDATE &amp; PMI</div>
-              <div className="text-[10px] sm:text-[11px] text-brand-muted truncate">Erfolgreiche Projekte</div>
-            </div>
-            <div className="stat-card-shimmer group flex flex-col items-center sm:items-start text-center sm:text-left px-2 py-1 rounded-xl transition-all duration-300 hover:bg-brand-offwhite/50 cursor-default border-t lg:border-t-0 lg:border-l border-brand-border/70 lg:pl-6">
-              <div className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-navy flex items-baseline tracking-tight leading-none">
-                <span className="counter-number" data-target={100}>100</span><span className="text-brand-gold font-serif">%</span>
-              </div>
-              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-brand-navy mt-1.5">INHABERGEFÜHRT</div>
-              <div className="text-[10px] sm:text-[11px] text-brand-muted truncate">Persönliche Partnerführung</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
